@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:body>
+	
+		<h:form>
+		
+			<p:panel header="Cadastro de Usuario" >
+			
+				<p:panelGrid columns="2">
+			
+					<p:outputLabel value="Nome" for="nome"/>
+					<p:inputText id="nome" value="#{usuarioController.usuario.nome}" />
+				
+					<p:outputLabel value="Sobrenome" for="sobrenome"/>
+					<p:inputText id="sobrenome" value="#{usuarioController.usuario.sobrenome}"/>
+				
+					<p:outputLabel value="E-mail" for="email"/>
+					<p:inputText id="email" value="#{usuarioController.usuario.email}"/>
+				
+					<p:outputLabel value="Cep" for="cep"/>
+					<p:inputText id="cep" value="#{usuarioController.usuario.cep}"/>
+				
+					<p:outputLabel value="Data de Nascimento " for="dataNascimento"/>
+					<p:calendar id="dataNascimento" value="#{usuarioController.usuario.dataNacimento}" mode="inline"/>
+				
+					<p:button id="grava" value="Gravar" action="#{usuarioController.adicionaUsuario()}"/>
+				
+				</p:panelGrid>
+			</p:panel>
+		
+		</h:form>
+		
+	
+	</h:body>
+</html>
